@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sanjana V - Computer Science (Data Science) Student Portfolio. Specializing in Python, Machine Learning, SQL, FinTech and IoT Driver Safety systems.">
+    <meta name="keywords" content="Sanjana V, Data Science, Machine Learning, Python, SQL, Portfolio, Driver Drowsiness Detection, Digital Money Transaction, Adhichunchanagiri Institute of Technology">
+    <meta name="author" content="Sanjana V">
+    
+    <!-- Theme color meta -->
+    <meta name="theme-color" content="#0b0f19">
+    
+    <title>Sanjana V | Computer Science (Data Science) Student</title>
+    
+    <!-- Google Fonts: Inter for crisp modern typography & JetBrains Mono for tech accents -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Interactive Neural Network Canvas -->
+    <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+    <!-- Ambient Gradient Glow Effects -->
+    <div class="ambient-glow glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow glow-2" aria-hidden="true"></div>
+    <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+    <!-- ========================================================
+         STICKY HEADER & NAVIGATION BAR
+         ======================================================== -->
+    <header class="navbar-wrapper" id="navbar">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <a href="#home" class="brand-logo" aria-label="Sanjana V Home">
+                <span class="logo-badge">SV</span>
+                <span class="logo-title">
+                    <span class="logo-name">SANJANA V</span>
+                    <span class="logo-tag">DATA SCIENCE</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <ul class="nav-links" id="nav-links" role="menubar">
+                <li role="none"><a href="#home" class="nav-link active" role="menuitem"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem"><i class="fa-solid fa-user"></i><span>About</span></a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem"><i class="fa-solid fa-code"></i><span>Skills</span></a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem"><i class="fa-solid fa-diagram-project"></i><span>Projects</span></a></li>
+                <li role="none"><a href="#education" class="nav-link" role="menuitem"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></a></li>
+                <li role="none"><a href="#certifications" class="nav-link" role="menuitem"><i class="fa-solid fa-certificate"></i><span>Certifications</span></a></li>
+                <li role="none"><a href="#achievements" class="nav-link" role="menuitem"><i class="fa-solid fa-trophy"></i><span>Achievements</span></a></li>
+                <li role="none"><a href="#resume" class="nav-link" role="menuitem"><i class="fa-solid fa-file-invoice"></i><span>Resume</span></a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem"><i class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
+            </ul>
+
+            <!-- Navbar Quick Action & Mobile Menu Toggle -->
+            <div class="nav-actions">
+                <a href="Sanjana_resume.pdf" download="Sanjana_V_Resume.pdf" class="btn btn-sm btn-outline-cyan nav-resume-btn" title="Download Resume PDF">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Resume</span>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div class="mobile-drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+    <div class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+        <div class="drawer-header">
+            <div class="brand-logo">
+                <span class="logo-badge">SV</span>
+                <span class="logo-title">
+                    <span class="logo-name">SANJANA V</span>
+                    <span class="logo-tag">DATA SCIENCE</span>
+                </span>
+            </div>
+            <button class="drawer-close" id="drawer-close" aria-label="Close Navigation Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="drawer-nav">
+            <li><a href="#home" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#about" class="drawer-link"><i class="fa-solid fa-user"></i> About Me</a></li>
+            <li><a href="#skills" class="drawer-link"><i class="fa-solid fa-code"></i> Skills & Stack</a></li>
+            <li><a href="#projects" class="drawer-link"><i class="fa-solid fa-diagram-project"></i> Featured Projects</a></li>
+            <li><a href="#education" class="drawer-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#certifications" class="drawer-link"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+            <li><a href="#achievements" class="drawer-link"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
+            <li><a href="#resume" class="drawer-link"><i class="fa-solid fa-file-invoice"></i> Resume & Video</a></li>
+            <li><a href="#contact" class="drawer-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="drawer-footer">
+            <a href="Sanjana_resume.pdf" download="Sanjana_V_Resume.pdf" class="btn btn-primary btn-full">
+                <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <div class="drawer-socials">
+                <a href="https://github.com/sanjanavaradarj" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/sanjana-v" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:sanjanavaradarj@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================
+         MAIN CONTENT SECTIONS
+         ======================================================== -->
+    <main id="main-content">
+
+        <!-- 1. HOME / HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg-overlay" style="background-image: url('sanjana%20background.jpeg');"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <!-- Status Badge -->
+                    <div class="hero-status-pill animate-fade-in">
+                        <span class="status-indicator-dot"></span>
+                        <span class="status-text">Available for Data Science & Software Roles</span>
+                    </div>
+
+                    <!-- Intro Greetings -->
+                    <p class="hero-greeting animate-fade-in-delay-1">Hello, I'm</p>
+                    <h1 class="hero-name animate-fade-in-delay-1">
+                        Sanjana <span class="text-gradient">V</span>
+                    </h1>
+
+                    <!-- Dynamic Typing Subtitle -->
+                    <div class="hero-dynamic-subtitle animate-fade-in-delay-2">
+                        <span class="subtitle-prefix">I am a </span>
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+
+                    <!-- Hero Pitch -->
+                    <p class="hero-description animate-fade-in-delay-3">
+                        Computer Science (Data Science) undergraduate at Adhichunchanagiri Institute of Technology. 
+                        Passionate about deriving actionable insights from complex datasets, crafting intelligent 
+                        machine learning pipelines, and building robust software solutions that solve real-world challenges.
+                    </p>
+
+                    <!-- Key Metrics Strip -->
+                    <div class="hero-metrics-grid animate-fade-in-delay-3">
+                        <div class="metric-card">
+                            <span class="metric-number">2+</span>
+                            <span class="metric-label">Flagship Projects</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number">B.E.</span>
+                            <span class="metric-label">CSE (Data Science)</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-number">100%</span>
+                            <span class="metric-label">Dedication to Quality</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="hero-cta-group animate-fade-in-delay-4">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#resume" class="btn btn-secondary">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>View Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+
+                    <!-- Social / Connect Strip -->
+                    <div class="hero-social-strip animate-fade-in-delay-4">
+                        <span class="social-label">Connect:</span>
+                        <div class="social-links">
+                            <a href="https://github.com/sanjanavaradarj" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile" title="GitHub: sanjanavaradarj">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/sanjana-v" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn: sanjana-v">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:sanjanavaradarj@gmail.com" class="social-icon" aria-label="Email Sanjana" title="Email: sanjanavaradarj@gmail.com">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="tel:+919901611394" class="social-icon" aria-label="Call Sanjana" title="Phone: +91 9901611394">
+                                <i class="fa-solid fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Photo Card -->
+                <div class="hero-visual animate-fade-in-delay-2">
+                    <div class="photo-card-wrapper">
+                        <!-- Holographic ambient frame -->
+                        <div class="photo-glow-ring"></div>
+                        <div class="photo-card">
+                            <img src="sanjana%20image.jpeg" alt="Sanjana V - Computer Science (Data Science) Student" class="hero-photo" loading="eager">
+                            <div class="photo-overlay-badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Aspiring Data Scientist</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Tech Tags Around Photo -->
+                        <div class="floating-badge badge-top-right">
+                            <i class="fa-brands fa-python text-amber"></i>
+                            <span>Python & ML</span>
+                        </div>
+                        <div class="floating-badge badge-bottom-left">
+                            <i class="fa-solid fa-database text-cyan"></i>
+                            <span>SQL & Databases</span>
+                        </div>
+                        <div class="floating-badge badge-center-right">
+                            <i class="fa-solid fa-microchip text-violet"></i>
+                            <span>IoT & Embedded</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Scroll to About section">
+                    <span class="scroll-mouse">
+                        <span class="scroll-wheel"></span>
+                    </span>
+                    <span class="scroll-text">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Biography</div>
+                    <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                    <p class="section-subtitle">A glimpse into my background, academic pursuit, and passion for computing & data science.</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left Column: Image with Stats Highlight -->
+                    <div class="about-visual-column">
+                        <div class="about-image-card">
+                            <img src="sanjana%20image.jpeg" alt="Sanjana V" class="about-image">
+                            <div class="about-image-glass">
+                                <div class="about-glass-item">
+                                    <span class="about-glass-number">2026</span>
+                                    <span class="about-glass-label">Graduation Year</span>
+                                </div>
+                                <div class="about-glass-divider"></div>
+                                <div class="about-glass-item">
+                                    <span class="about-glass-number">6.58</span>
+                                    <span class="about-glass-label">B.E. CGPA</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Personal Info List -->
+                        <div class="personal-info-card">
+                            <h3 class="info-card-heading"><i class="fa-solid fa-id-card"></i> Quick Profile</h3>
+                            <ul class="info-list">
+                                <li>
+                                    <span class="info-label"><i class="fa-solid fa-user"></i> Full Name:</span>
+                                    <span class="info-val">Sanjana V</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fa-solid fa-graduation-cap"></i> Major:</span>
+                                    <span class="info-val">B.E. CSE (Data Science)</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fa-solid fa-building-columns"></i> College:</span>
+                                    <span class="info-val">AIT Chikkamagaluru</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
+                                    <span class="info-val">Karnataka, India</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                                    <a href="mailto:sanjanavaradarj@gmail.com" class="info-val-link">sanjanavaradarj@gmail.com</a>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                                    <a href="tel:+919901611394" class="info-val-link">+91 9901611394</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Narrative & Focus Pillars -->
+                    <div class="about-narrative-column">
+                        <div class="about-story-card">
+                            <h3 class="story-title">Crafting Intelligent Solutions with Data & Code</h3>
+                            <p class="story-text">
+                                I am an ambitious <strong>Computer Science Engineering student specializing in Data Science</strong> at 
+                                Adhichunchanagiri Institute of Technology, Chikkamagaluru. My passion lies at the intersection of data analytics, 
+                                machine learning algorithms, and system engineering.
+                            </p>
+                            <p class="story-text">
+                                Throughout my academic journey, I have developed a strong foundation in core computer science principles—ranging 
+                                from <em>Data Structures & Algorithms</em> to <em>Operating Systems</em> and <em>Database Management</em>. 
+                                I have hands-on experience developing practical applications including a <strong>Digital Money Transaction System</strong> 
+                                that ensures safe transaction workflows, and an IoT-enabled <strong>Driver Drowsiness Detection System</strong> 
+                                designed to enhance vehicle safety through sensor and computer vision intelligence.
+                            </p>
+                            <p class="story-text">
+                                I am currently seeking opportunities to gain hands-on industry experience, collaborate with engineering teams, 
+                                and deploy machine learning models and data pipelines that solve meaningful, large-scale problems.
+                            </p>
+
+                            <!-- Core Focus Pillars -->
+                            <div class="about-pillars-grid">
+                                <div class="pillar-card">
+                                    <div class="pillar-icon-box cyan-glow">
+                                        <i class="fa-solid fa-brain"></i>
+                                    </div>
+                                    <div class="pillar-content">
+                                        <h4 class="pillar-title">Machine Learning & AI</h4>
+                                        <p class="pillar-desc">Predictive modeling, data preprocessing, classification algorithms, and feature analysis.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pillar-card">
+                                    <div class="pillar-icon-box blue-glow">
+                                        <i class="fa-brands fa-python"></i>
+                                    </div>
+                                    <div class="pillar-content">
+                                        <h4 class="pillar-title">Python & Software Dev</h4>
+                                        <p class="pillar-desc">Writing clean, modular code in Python and Java with disciplined OOP principles.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pillar-card">
+                                    <div class="pillar-icon-box violet-glow">
+                                        <i class="fa-solid fa-database"></i>
+                                    </div>
+                                    <div class="pillar-content">
+                                        <h4 class="pillar-title">Database Engineering (SQL)</h4>
+                                        <p class="pillar-desc">Relational database design, query optimization, ACID transactions, and data modeling.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pillar-card">
+                                    <div class="pillar-icon-box emerald-glow">
+                                        <i class="fa-solid fa-microchip"></i>
+                                    </div>
+                                    <div class="pillar-content">
+                                        <h4 class="pillar-title">Embedded & IoT Systems</h4>
+                                        <p class="pillar-desc">Interfacing microcontrollers (Arduino) with physical sensors for real-time safety tech.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Buttons Strip -->
+                            <div class="about-actions">
+                                <a href="Sanjana_resume.pdf" download="Sanjana_V_Resume.pdf" class="btn btn-primary">
+                                    <i class="fa-solid fa-download"></i> Download Full Resume
+                                </a>
+                                <a href="sanjana%20certificates.pdf" target="_blank" class="btn btn-secondary">
+                                    <i class="fa-solid fa-award"></i> View Unix Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SKILLS SECTION -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-layer-group"></i> Competencies</div>
+                    <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+                    <p class="section-subtitle">Proficiencies in Data Science, Machine Learning, backend programming, and systems.</p>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="skill-filters" role="tablist">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+                    <button class="filter-btn" data-filter="datascience" role="tab" aria-selected="false">Data Science & ML</button>
+                    <button class="filter-btn" data-filter="programming" role="tab" aria-selected="false">Programming</button>
+                    <button class="filter-btn" data-filter="databases" role="tab" aria-selected="false">Databases & SQL</button>
+                    <button class="filter-btn" data-filter="core" role="tab" aria-selected="false">Core CS & Systems</button>
+                    <button class="filter-btn" data-filter="hardware" role="tab" aria-selected="false">Embedded & IoT</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid">
+
+                    <!-- Data Science & ML -->
+                    <div class="skill-card" data-category="datascience">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap cyan">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div class="skill-meta">
+                                <h3 class="skill-name">Machine Learning</h3>
+                                <span class="skill-type">Data Science & AI</span>
+                            </div>
+                            <span class="skill-badge">Core Focus</span>
+                        </div>
+                        <p class="skill-desc">Supervised algorithms, classification, regression, model evaluation, and predictive workflow construction.</p>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 82%;"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="mini-tag">Scikit-Learn</span>
+                            <span class="mini-tag">Model Evaluation</span>
+                            <span class="mini-tag">Classification</span>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="skill-card" data-category="programming datascience">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap amber">
+                                <i class="fa-brands fa-python"></i>
+                            </div>
+                            <div class="skill-meta">
+                                <h3 class="skill-name">Python</h3>
+                                <span class="skill-type">Primary Language</span>
+                            </div>
+                            <span class="skill-badge highlight">Advanced</span>
+                        </div>
+                        <p class="skill-desc">Data manipulation, scientific computing, automation scripts, and object-oriented backend programming.</p>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 88%;"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="mini-tag">Data Analysis</span>
+                            <span class="mini-tag">NumPy</span>
+                            <span class="mini-tag">Pandas</span>
+                            <span class="mini-tag">OOP</span>
+                        </div>
+                    </div>
+
+                    <!-- SQL & Databases -->
+                    <div class="skill-card" data-category="databases">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap blue">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div class="skill-meta">
+                                <h3 class="skill-name">SQL</h3>
+                                <span class="skill-type">Database Management</span>
+                            </div>
+                            <span class="skill-badge">Proficient</span>
+                        </div>
+                        <p class="skill-desc">Relational schema design, complex joins, subqueries, indexing, and transactional ACID guarantees.</p>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="mini-tag">MySQL</span>
+                            <span class="mini-tag">Query Optimization</span>
+                            <span class="mini-tag">Data Modeling</span>
+                        </div>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="skill-card" data-category="programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap red">
+                                <i class="fa-brands fa-java"></i>
+                            </div>
+                            <div class="skill-meta">
+                                <h3 class="skill-name">Java</h3>
+                                <span class="skill-type">Backend & Enterprise</span>
+                            </div>
+                            <span class="skill-badge">Skilled</span>
+                        </div>
+                        <p class="skill-desc">Robust backend development, object-oriented principles, modular class architectures, and transaction handling.</p>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="mini-tag">Core Java</span>
+                            <span class="mini-tag">Backend Dev</span>
+                            <span class="mini-tag">Collections</span>
+                        </div>
+                    </div>
+
+                    <!-- Data Structures & Algorithms -->
+                    <div class="skill-card" data-category="core">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap violet">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div class="skill-meta">
+                                <h3 class="skill-name">Data Structures & Algo</h3>
+                                <span class="skill-type">Core Computer Science</span>
+                            </div>
+                            <span class="skill-badge">Foundational</span>
+                        </div>
+                        <p class="skill-desc">Arrays, linked lists, trees, graphs, sorting/searching algorithms, and space/time complexity optimization.</p>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="mini-tag">Algorithms</span>
+                            <span class="mini-tag">Trees & Graphs</span>
+                            <span class="mini-tag">Optimization</span>
+                        </div>
+                    </div>
+
+                    <!-- Operating Systems & Unix -->
+                    <div class="skill-card" data-category="core">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap emerald">
+                                <i class="fa-brands fa-linux"></i>
+                            </div>
+                            <div class="skill-meta">
+                                <h3 class="skill-name">Operating Systems & Unix</h3>
+                                <span class="skill-type">Certified Knowledge</span>
+                            </div>
+                            <span class="skill-badge">Certified</span>
+                        </div>
+                        <p class="skill-desc">Process management, memory scheduling, file systems, Unix CLI commands, and shell navigation.</p>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 82%;"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="mini-tag">Unix CLI</span>
+                            <span class="mini-tag">OS Scheduling</span>
+                            <span class="mini-tag">Infosys Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Systems & Arduino -->
+                    <div class="skill-card" data-category="hardware">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap teal">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div class="skill-meta">
+                                <h3 class="skill-name">Embedded Systems & Arduino</h3>
+                                <span class="skill-type">Hardware Integration</span>
+                            </div>
+                            <span class="skill-badge">Hands-On</span>
+                        </div>
+                        <p class="skill-desc">Microcontroller programming, sensor telemetry integration, real-time safety alerting, and edge circuit logic.</p>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 78%;"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="mini-tag">Arduino</span>
+                            <span class="mini-tag">Microcontrollers</span>
+                            <span class="mini-tag">Sensors</span>
+                        </div>
+                    </div>
+
+                    <!-- Developer Tools & Git -->
+                    <div class="skill-card" data-category="core programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap orange">
+                                <i class="fa-brands fa-git-alt"></i>
+                            </div>
+                            <div class="skill-meta">
+                                <h3 class="skill-name">Developer Tools & Version Control</h3>
+                                <span class="skill-type">Workflow & Tools</span>
+                            </div>
+                            <span class="skill-badge">Active</span>
+                        </div>
+                        <p class="skill-desc">Git version control, GitHub collaboration, VS Code development environment, and terminal workflows.</p>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="mini-tag">Git</span>
+                            <span class="mini-tag">GitHub</span>
+                            <span class="mini-tag">VS Code</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECTS SECTION -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-flask"></i> Portfolio Work</div>
+                    <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                    <p class="section-subtitle">Real-world academic and engineering systems built with modern technologies.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1: DIGITAL MONEY TRANSACTION -->
+                    <article class="project-card">
+                        <div class="project-banner project-banner-fintech">
+                            <div class="project-category-pill">
+                                <i class="fa-solid fa-wallet"></i> FinTech & Backend
+                            </div>
+                            <div class="project-banner-icon">
+                                <i class="fa-solid fa-money-bill-transfer"></i>
+                            </div>
+                            <span class="project-duration-badge"><i class="fa-regular fa-clock"></i> 6 Months</span>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Digital Money Transaction System</h3>
+                            <p class="project-summary">
+                                A comprehensive financial application designed to modernize traditional cash operations into a secure, 
+                                transparent, and friction-free digital monetary transaction workflow.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check text-cyan"></i>
+                                    <span>Engineered secure digital payment protocols ensuring end-to-end transaction integrity.</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check text-cyan"></i>
+                                    <span>Designed relational database schemas with strict ACID compliance to prevent race conditions.</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check text-cyan"></i>
+                                    <span>Built intuitive user account management, wallet authentication, and transaction logging.</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="tech-tag"><i class="fa-brands fa-java"></i> Java</span>
+                                <span class="tech-tag"><i class="fa-solid fa-database"></i> SQL</span>
+                                <span class="tech-tag"><i class="fa-solid fa-lock"></i> Cryptography & Auth</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm open-project-modal" data-project="fintech">
+                                    <i class="fa-solid fa-circle-info"></i> Project Details
+                                </button>
+                                <a href="https://github.com/sanjanavaradarj" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fa-brands fa-github"></i> View GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: DRIVER DROWSINESS DETECTION SYSTEM -->
+                    <article class="project-card">
+                        <div class="project-banner project-banner-iot">
+                            <div class="project-category-pill">
+                                <i class="fa-solid fa-car"></i> IoT & Computer Vision Safety
+                            </div>
+                            <div class="project-banner-icon">
+                                <i class="fa-solid fa-eye-slash"></i>
+                            </div>
+                            <span class="project-duration-badge"><i class="fa-regular fa-clock"></i> 6 Months</span>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Driver Drowsiness Detection System</h3>
+                            <p class="project-summary">
+                                An intelligent real-time driver fatigue monitoring system integrating sensor telemetry and microcontrollers 
+                                to detect sleepiness symptoms and safeguard lives on the road.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check text-emerald"></i>
+                                    <span>Integrated an Arduino-based microcontroller with specialized sensors to detect fatigue signatures.</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check text-emerald"></i>
+                                    <span>Implemented automated buzzer alarm thresholds to instantly alert drivers upon fatigue trigger.</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check text-emerald"></i>
+                                    <span>Tested embedded hardware response times to ensure ultra-low latency safety intervention.</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="tech-tag"><i class="fa-solid fa-microchip"></i> Arduino</span>
+                                <span class="tech-tag"><i class="fa-solid fa-memory"></i> Embedded Systems</span>
+                                <span class="tech-tag"><i class="fa-solid fa-bell"></i> Sensor Interfacing</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm open-project-modal" data-project="drowsiness">
+                                    <i class="fa-solid fa-circle-info"></i> Project Details
+                                </button>
+                                <a href="https://github.com/sanjanavaradarj" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fa-brands fa-github"></i> View GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. EDUCATION SECTION -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Background</div>
+                    <h2 class="section-title">My <span class="text-gradient">Education</span></h2>
+                    <p class="section-subtitle">Chronological progression of academic milestones, coursework, and institutions.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-line" aria-hidden="true"></div>
+
+                    <!-- Milestone 1: Bachelor of Engineering -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <span class="timeline-year"><i class="fa-regular fa-calendar-check"></i> 2022 - 2026 (Expected)</span>
+                                <span class="timeline-badge badge-current">Current Degree</span>
+                            </div>
+                            <h3 class="timeline-degree">Bachelor of Engineering (B.E.)</h3>
+                            <h4 class="timeline-specialization text-gradient">Computer Science & Engineering (Data Science)</h4>
+                            <p class="timeline-institution">
+                                <i class="fa-solid fa-location-dot"></i> Adhichunchanagiri Institute of Technology (AIT), Chikkamagaluru, Karnataka
+                            </p>
+                            <div class="timeline-grade-strip">
+                                <span class="grade-label">Academic Score:</span>
+                                <span class="grade-pill">CGPA: 6.58 / 10.0</span>
+                            </div>
+                            <p class="timeline-description">
+                                Focusing on Data Science foundations, Machine Learning algorithms, Big Data concepts, 
+                                Database Management Systems (DBMS), Operating Systems, and Object-Oriented Software Design.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="mini-tag">Data Science</span>
+                                <span class="mini-tag">Machine Learning</span>
+                                <span class="mini-tag">DBMS</span>
+                                <span class="mini-tag">Operating Systems</span>
+                                <span class="mini-tag">DSA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2: Pre-University (PU College) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <span class="timeline-year"><i class="fa-regular fa-calendar-check"></i> 2023 - 2025</span>
+                                <span class="timeline-badge">Pre-University</span>
+                            </div>
+                            <h3 class="timeline-degree">Pre-University Course (PUC)</h3>
+                            <h4 class="timeline-specialization text-gradient">Science & Computer Science Stream</h4>
+                            <p class="timeline-institution">
+                                <i class="fa-solid fa-location-dot"></i> Nagarjuna PU College, Chikkaballapur, Karnataka
+                            </p>
+                            <div class="timeline-grade-strip">
+                                <span class="grade-label">Board Result:</span>
+                                <span class="grade-pill">Score: 68.17%</span>
+                            </div>
+                            <p class="timeline-description">
+                                Rigorous training in analytical mathematics, computing concepts, logic formulation, and foundational scientific principles.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="mini-tag">Mathematics</span>
+                                <span class="mini-tag">Computer Science</span>
+                                <span class="mini-tag">Physics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3: 10th Standard (High School) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <span class="timeline-year"><i class="fa-regular fa-calendar-check"></i> Completed 2023</span>
+                                <span class="timeline-badge badge-distinction">Distinction</span>
+                            </div>
+                            <h3 class="timeline-degree">Secondary School Leaving Certificate (10th)</h3>
+                            <h4 class="timeline-specialization text-gradient">General High School Curriculum</h4>
+                            <p class="timeline-institution">
+                                <i class="fa-solid fa-location-dot"></i> Oxford English School, Bangalore Rural, Devanahalli
+                            </p>
+                            <div class="timeline-grade-strip">
+                                <span class="grade-label">Final Board Score:</span>
+                                <span class="grade-pill highlight">Score: 87.4% (Distinction)</span>
+                            </div>
+                            <p class="timeline-description">
+                                Achieved outstanding scholastic distinction with excellence in Mathematics, Science, and English communication skills.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="mini-tag">87.4% Distinction</span>
+                                <span class="mini-tag">Oxford English School</span>
+                                <span class="mini-tag">Bangalore Rural</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CERTIFICATIONS SECTION -->
+        <section id="certifications" class="section certifications-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-stamp"></i> Credentials</div>
+                    <h2 class="section-title">Certifications & <span class="text-gradient">Credentials</span></h2>
+                    <p class="section-subtitle">Verified industry and academic certifications validating technical proficiency.</p>
+                </div>
+
+                <div class="certifications-grid">
+
+                    <!-- Featured Verified Certificate Card -->
+                    <div class="cert-card cert-featured">
+                        <div class="cert-status-corner">
+                            <span><i class="fa-solid fa-certificate"></i> Verified</span>
+                        </div>
+                        <div class="cert-icon-container">
+                            <i class="fa-brands fa-linux"></i>
+                        </div>
+                        <div class="cert-content">
+                            <div class="cert-header">
+                                <span class="cert-issuer">Infosys Springboard | Wingspan</span>
+                                <span class="cert-date"><i class="fa-regular fa-calendar"></i> October 6, 2026</span>
+                            </div>
+                            <h3 class="cert-title">Introduction to Unix</h3>
+                            <p class="cert-desc">
+                                Successfully awarded to <strong>Sanjana V</strong> for demonstrating comprehensive mastery of Unix fundamentals, 
+                                operating system architecture, file navigation, process orchestration, permissions, and command-line automation.
+                            </p>
+                            
+                            <div class="cert-meta-info">
+                                <div class="meta-item">
+                                    <span class="meta-title">Issued On:</span>
+                                    <span class="meta-val">Tuesday, October 6, 2026</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-title">Verification:</span>
+                                    <a href="https://verify.onwingspan.com" target="_blank" rel="noopener noreferrer" class="meta-link">
+                                        verify.onwingspan.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="cert-actions">
+                                <a href="sanjana%20certificates.pdf" target="_blank" class="btn btn-primary btn-sm">
+                                    <i class="fa-solid fa-eye"></i> View Certificate PDF
+                                </a>
+                                <button class="btn btn-secondary btn-sm preview-cert-btn" data-cert="sanjana%20certificates.pdf">
+                                    <i class="fa-solid fa-expand"></i> In-Page Preview
+                                </button>
+                                <a href="sanjana%20certificates.pdf" download="Sanjana_Unix_Certificate.pdf" class="btn btn-outline btn-sm">
+                                    <i class="fa-solid fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Skills Credentials -->
+                    <div class="cert-card">
+                        <div class="cert-icon-container cyan-box">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <div class="cert-content">
+                            <div class="cert-header">
+                                <span class="cert-issuer">Academic Coursework</span>
+                                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 2025 - 2026</span>
+                            </div>
+                            <h3 class="cert-title">Python for Data Science</h3>
+                            <p class="cert-desc">
+                                Comprehensive coursework covering NumPy arrays, Pandas DataFrames, data wrangling, 
+                                statistical computing, and exploratory visualization.
+                            </p>
+                            <div class="cert-tech-pills">
+                                <span class="mini-tag">Python 3</span>
+                                <span class="mini-tag">Data Cleaning</span>
+                                <span class="mini-tag">Visualization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon-container blue-box">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div class="cert-content">
+                            <div class="cert-header">
+                                <span class="cert-issuer">Academic Coursework</span>
+                                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 2025 - 2026</span>
+                            </div>
+                            <h3 class="cert-title">Relational Databases & SQL Essentials</h3>
+                            <p class="cert-desc">
+                                Database schema modeling, normalization up to BCNF, complex subqueries, relational algebra, 
+                                and transaction management for data integrity.
+                            </p>
+                            <div class="cert-tech-pills">
+                                <span class="mini-tag">SQL</span>
+                                <span class="mini-tag">Normalization</span>
+                                <span class="mini-tag">Transaction Control</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. ACHIEVEMENTS SECTION -->
+        <section id="achievements" class="section achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-trophy"></i> Milestones</div>
+                    <h2 class="section-title">Key <span class="text-gradient">Achievements</span></h2>
+                    <p class="section-subtitle">Significant achievements, recognitions, and innovative contributions.</p>
+                </div>
+
+                <div class="achievements-grid">
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrapper amber-glow">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="achievement-body">
+                            <span class="achievement-category">Engineering Innovation</span>
+                            <h3 class="achievement-title">Driver Safety Hardware-Software Integration</h3>
+                            <p class="achievement-description">
+                                Successfully developed and demonstrated an IoT-driven Driver Drowsiness Detection System, integrating 
+                                Arduino microcontrollers and real-time sensory alerting to proactively prevent road accidents.
+                            </p>
+                            <div class="achievement-pill">
+                                <i class="fa-solid fa-check"></i> 6-Month Project Completion
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrapper cyan-glow">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="achievement-body">
+                            <span class="achievement-category">Systems Development</span>
+                            <h3 class="achievement-title">Secure Digital Payment Transition Workflow</h3>
+                            <p class="achievement-description">
+                                Designed and implemented a modern digital transaction architecture demonstrating secure transactions, 
+                                relational balance management, and intuitive payment transition from physical currency.
+                            </p>
+                            <div class="achievement-pill">
+                                <i class="fa-solid fa-check"></i> FinTech Architecture
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrapper emerald-glow">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="achievement-body">
+                            <span class="achievement-category">Academic Excellence</span>
+                            <h3 class="achievement-title">87.4% High School Distinction</h3>
+                            <p class="achievement-description">
+                                Attained distinction in 10th standard board examinations from Oxford English School, ranking in the 
+                                top percentile of the cohort with excellence in mathematics and logical problem-solving.
+                            </p>
+                            <div class="achievement-pill">
+                                <i class="fa-solid fa-check"></i> Distinction Holder
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-icon-wrapper violet-glow">
+                            <i class="fa-solid fa-code-compare"></i>
+                        </div>
+                        <div class="achievement-body">
+                            <span class="achievement-category">Continuous Learning</span>
+                            <h3 class="achievement-title">Multi-Language Competency & Unix Certification</h3>
+                            <p class="achievement-description">
+                                Attained official certification in Unix from Infosys Springboard and built versatile cross-stack competencies 
+                                spanning Python, Java, SQL, and embedded systems programming.
+                            </p>
+                            <div class="achievement-pill">
+                                <i class="fa-solid fa-check"></i> Verified Wingspan Credential
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. RESUME & VIDEO SECTION -->
+        <section id="resume" class="section resume-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-file-lines"></i> Career Profile</div>
+                    <h2 class="section-title">Resume & <span class="text-gradient">Video Introduction</span></h2>
+                    <p class="section-subtitle">Examine my complete credentials, download the PDF resume, or watch my introduction video.</p>
+                </div>
+
+                <div class="resume-video-layout">
+
+                    <!-- Video Resume Card -->
+                    <div class="resume-video-card">
+                        <div class="video-card-header">
+                            <div class="video-card-badge">
+                                <i class="fa-solid fa-video"></i> Video Resume
+                            </div>
+                            <span class="video-duration"><i class="fa-regular fa-clock"></i> 0:51 min</span>
+                        </div>
+
+                        <!-- Video Player Wrapper -->
+                        <div class="custom-video-wrapper">
+                            <video id="resume-video" preload="metadata" playsinline>
+                                <source src="sanjana%20resume%20vedio.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+
+                            <!-- Custom Video Play Overlay -->
+                            <div class="video-overlay" id="video-overlay">
+                                <button class="big-play-btn" id="big-play-btn" aria-label="Play Resume Video">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                                <span class="overlay-text">Click to Play Video Introduction</span>
+                            </div>
+
+                            <!-- Custom Controls Bar -->
+                            <div class="video-controls-bar" id="video-controls">
+                                <button class="control-btn" id="play-pause-btn" aria-label="Play or Pause">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                                <div class="progress-bar-container" id="video-progress-container">
+                                    <div class="video-progress" id="video-progress"></div>
+                                </div>
+                                <span class="time-display" id="time-display">0:00 / 0:51</span>
+                                <button class="control-btn" id="mute-btn" aria-label="Mute or Unmute">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </button>
+                                <button class="control-btn" id="fullscreen-btn" aria-label="Fullscreen">
+                                    <i class="fa-solid fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="video-card-footer">
+                            <div class="video-speaker-info">
+                                <img src="sanjana%20image.jpeg" alt="Sanjana V" class="speaker-avatar">
+                                <div>
+                                    <h4 class="speaker-name">Sanjana V</h4>
+                                    <p class="speaker-title">Video Introduction • Self-Presentation</p>
+                                </div>
+                            </div>
+                            <p class="video-description">
+                                Hear directly from me about my academic background, technical skills in Data Science and Python, 
+                                and my eagerness to contribute to collaborative engineering teams.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- PDF Resume Overview & Download Card -->
+                    <div class="resume-document-card">
+                        <div class="doc-card-header">
+                            <div class="doc-badge">
+                                <i class="fa-solid fa-file-pdf"></i> Official Curriculum Vitae
+                            </div>
+                            <span class="file-size-badge">PDF • 118 KB</span>
+                        </div>
+
+                        <div class="resume-preview-summary">
+                            <div class="resume-hero-header">
+                                <h3 class="resume-person-name">Sanjana V</h3>
+                                <p class="resume-person-role">B.E. Computer Science (Data Science) Student</p>
+                                <div class="resume-contacts-mini">
+                                    <span><i class="fa-solid fa-phone"></i> +91 9901611394</span>
+                                    <span><i class="fa-solid fa-envelope"></i> sanjanavaradarj@gmail.com</span>
+                                </div>
+                            </div>
+
+                            <div class="resume-section-mini">
+                                <h4 class="mini-sec-heading"><i class="fa-solid fa-bolt"></i> Core Skills</h4>
+                                <div class="mini-tags-wrap">
+                                    <span class="res-tag">Python</span>
+                                    <span class="res-tag">Machine Learning</span>
+                                    <span class="res-tag">SQL</span>
+                                    <span class="res-tag">Java</span>
+                                    <span class="res-tag">Operating Systems</span>
+                                    <span class="res-tag">DSA</span>
+                                    <span class="res-tag">Arduino & IoT</span>
+                                </div>
+                            </div>
+
+                            <div class="resume-section-mini">
+                                <h4 class="mini-sec-heading"><i class="fa-solid fa-diagram-project"></i> Key Projects</h4>
+                                <ul class="res-project-list">
+                                    <li>
+                                        <strong>Digital Money Transaction System:</strong> Java & Python digital payment workflow solution.
+                                    </li>
+                                    <li>
+                                        <strong>Driver Drowsiness Detection System:</strong> Arduino, embedded sensors, real-time safety tech.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="resume-section-mini">
+                                <h4 class="mini-sec-heading"><i class="fa-solid fa-graduation-cap"></i> Education</h4>
+                                <p class="res-edu-line">
+                                    <strong>B.E. CSE (Data Science)</strong>, Adhichunchanagiri Institute of Technology (2022 - 2026) | CGPA: 6.58
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Resume Actions Strip -->
+                        <div class="resume-download-actions">
+                            <a href="Sanjana_resume.pdf" download="Sanjana_V_Resume.pdf" class="btn btn-primary btn-full">
+                                <i class="fa-solid fa-download"></i>
+                                <span>Download Official Resume (PDF)</span>
+                            </a>
+                            <div class="resume-sub-actions">
+                                <a href="Sanjana_resume.pdf" target="_blank" class="btn btn-secondary">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
+                                </a>
+                                <button class="btn btn-outline" id="btn-preview-resume-modal">
+                                    <i class="fa-solid fa-magnifying-glass"></i> Quick Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</div>
+                    <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+                    <p class="section-subtitle">Feel free to reach out for internship opportunities, project collaborations, or tech discussions.</p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- Contact Details Column -->
+                    <div class="contact-info-column">
+                        <div class="contact-intro-card">
+                            <h3 class="contact-card-title">Let's build something impactful together</h3>
+                            <p class="contact-card-text">
+                                I am actively seeking software engineering and data science internships or entry-level positions. 
+                                My inbox is always open whether you have an exciting opportunity, a query about my projects, 
+                                or just want to discuss machine learning!
+                            </p>
+
+                            <!-- Direct Contact Cards -->
+                            <div class="contact-channels">
+
+                                <!-- Email -->
+                                <div class="channel-card">
+                                    <div class="channel-icon-box cyan-glow">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="channel-content">
+                                        <span class="channel-label">Email Address</span>
+                                        <a href="mailto:sanjanavaradarj@gmail.com" class="channel-val">sanjanavaradarj@gmail.com</a>
+                                    </div>
+                                    <button class="copy-btn" data-copy="sanjanavaradarj@gmail.com" title="Copy Email" aria-label="Copy email address">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="channel-card">
+                                    <div class="channel-icon-box emerald-glow">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="channel-content">
+                                        <span class="channel-label">Phone / WhatsApp</span>
+                                        <a href="tel:+919901611394" class="channel-val">+91 9901611394</a>
+                                    </div>
+                                    <button class="copy-btn" data-copy="+919901611394" title="Copy Phone Number" aria-label="Copy phone number">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+
+                                <!-- LinkedIn -->
+                                <div class="channel-card">
+                                    <div class="channel-icon-box blue-glow">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
+                                    <div class="channel-content">
+                                        <span class="channel-label">LinkedIn Profile</span>
+                                        <a href="https://linkedin.com/in/sanjana-v" target="_blank" rel="noopener noreferrer" class="channel-val">
+                                            linkedin.com/in/sanjana-v <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- GitHub -->
+                                <div class="channel-card">
+                                    <div class="channel-icon-box violet-glow">
+                                        <i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div class="channel-content">
+                                        <span class="channel-label">GitHub Repositories</span>
+                                        <a href="https://github.com/sanjanavaradarj" target="_blank" rel="noopener noreferrer" class="channel-val">
+                                            github.com/sanjanavaradarj <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="channel-card">
+                                    <div class="channel-icon-box amber-glow">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="channel-content">
+                                        <span class="channel-label">Location</span>
+                                        <span class="channel-val">Chikkamagaluru & Bangalore Rural, Karnataka, India</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Column -->
+                    <div class="contact-form-column">
+                        <div class="contact-form-card">
+                            <h3 class="form-title">Send a Direct Message</h3>
+                            <p class="form-subtitle">Fill in the fields below and I will respond to your message promptly.</p>
+
+                            <form id="contact-form" class="contact-form" novalidate>
+                                <div class="form-group">
+                                    <label for="contact-name" class="form-label">Your Name <span class="required">*</span></label>
+                                    <div class="input-wrap">
+                                        <i class="fa-regular fa-user input-icon"></i>
+                                        <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Johnson" required>
+                                    </div>
+                                    <span class="input-error-msg" id="name-error">Please enter your name.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-email" class="form-label">Your Email <span class="required">*</span></label>
+                                    <div class="input-wrap">
+                                        <i class="fa-regular fa-envelope input-icon"></i>
+                                        <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@example.com" required>
+                                    </div>
+                                    <span class="input-error-msg" id="email-error">Please provide a valid email address.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-subject" class="form-label">Subject <span class="required">*</span></label>
+                                    <div class="input-wrap">
+                                        <i class="fa-solid fa-tag input-icon"></i>
+                                        <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Internship Opportunity / Collaboration" required>
+                                    </div>
+                                    <span class="input-error-msg" id="subject-error">Please enter a subject.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-message" class="form-label">Your Message <span class="required">*</span></label>
+                                    <div class="input-wrap">
+                                        <textarea id="contact-message" name="message" rows="5" class="form-textarea" placeholder="Hello Sanjana, I came across your portfolio and wanted to discuss..." required></textarea>
+                                    </div>
+                                    <span class="input-error-msg" id="message-error">Please enter your message (at least 10 characters).</span>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-full submit-btn" id="submit-btn">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Send Message</span>
+                                </button>
+                            </form>
+
+                            <!-- Feedback message container -->
+                            <div class="form-status" id="form-status" role="alert" style="display: none;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================
+         FOOTER
+         ======================================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="brand-logo">
+                        <span class="logo-badge">SV</span>
+                        <span class="logo-title">
+                            <span class="logo-name">SANJANA V</span>
+                            <span class="logo-tag">DATA SCIENCE</span>
+                        </span>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Computer Science (Data Science) undergraduate passionate about machine learning, 
+                        SQL database architecture, and building impactful digital solutions.
+                    </p>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#resume">Resume & Video</a></li>
+                        <li><a href="Sanjana_resume.pdf" download="Sanjana_V_Resume.pdf">Download Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social-col">
+                    <h4 class="footer-col-title">Social & Profiles</h4>
+                    <div class="footer-social-links">
+                        <a href="https://github.com/sanjanavaradarj" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/sanjana-v" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:sanjanavaradarj@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+919901611394" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                    <p class="footer-availability">
+                        <span class="status-indicator-dot"></span> Open to Summer Internships & 2026 Roles
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">
+                    &copy; 2026 <strong>Sanjana V</strong>. Built with precision, performance & modern web standards.
+                </p>
+                <a href="#home" class="back-to-top-link" aria-label="Back to top">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" class="floating-back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Global Toast Notification Element -->
+    <div id="toast-notification" class="toast-notification" role="status" aria-live="polite">
+        <i class="toast-icon fa-solid fa-circle-check"></i>
+        <span class="toast-message">Message text</span>
+    </div>
+
+    <!-- ========================================================
+         MODALS
+         ======================================================== -->
+
+    <!-- Modal 1: Resume PDF Preview Modal -->
+    <div class="modal-backdrop" id="resume-modal" aria-hidden="true" role="dialog" aria-labelledby="resume-modal-title">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <i class="fa-solid fa-file-pdf text-red"></i>
+                    <h3 class="modal-title" id="resume-modal-title">Sanjana V - Resume Preview</h3>
+                </div>
+                <div class="modal-header-actions">
+                    <a href="Sanjana_resume.pdf" download="Sanjana_V_Resume.pdf" class="btn btn-sm btn-primary">
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                    <button class="modal-close" id="resume-modal-close" aria-label="Close modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe src="Sanjana_resume.pdf" class="pdf-iframe-viewer" title="Sanjana Resume PDF"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Certificate PDF Preview Modal -->
+    <div class="modal-backdrop" id="cert-modal" aria-hidden="true" role="dialog" aria-labelledby="cert-modal-title">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <i class="fa-solid fa-certificate text-cyan"></i>
+                    <h3 class="modal-title" id="cert-modal-title">Certificate Preview - Introduction to Unix</h3>
+                </div>
+                <div class="modal-header-actions">
+                    <a href="sanjana%20certificates.pdf" download="Sanjana_Unix_Certificate.pdf" class="btn btn-sm btn-primary">
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                    <button class="modal-close" id="cert-modal-close" aria-label="Close modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe src="sanjana%20certificates.pdf" class="pdf-iframe-viewer" title="Unix Certificate PDF"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Project Detail Modal -->
+    <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="project-modal-title">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <i class="fa-solid fa-diagram-project text-cyan"></i>
+                    <h3 class="modal-title" id="project-modal-title">Project Overview</h3>
+                </div>
+                <button class="modal-close" id="project-modal-close" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="project-modal-body">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle -->
+    <script src="script.js"></script>
+</body>
+</html>
